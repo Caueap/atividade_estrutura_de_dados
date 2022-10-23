@@ -26,7 +26,7 @@ public class TesteContem {
         lista.adiciona(a3);
         lista.adiciona(a4);
 
-        System.out.println(lista.contem(a5));
+        System.out.println(lista.contem(a3));
 
     }
 }

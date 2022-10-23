@@ -2,7 +2,7 @@ package atividade;
 
 public class Vetor {
 
-    private Aluno[] alunos = new Aluno[10000];
+    private Aluno[] alunos = new Aluno[100000];
 
     private int totalDeAlunos = 0;
 
@@ -32,7 +32,21 @@ public class Vetor {
 
     }
 
+    /*public boolean contem(Aluno aluno) {
+        for (int i = 0; i < this.alunos.length; i++) {
+            if (aluno == this.alunos[i]) {
+                return true;
+            }
+        }
+        return false;
+    }*/
+
     public boolean contem(Aluno aluno) {
+        for (int i = 0; i < this.totalDeAlunos; i++) {
+            if (aluno == this.alunos[i]) {
+                return true;
+            }
+        }
         return false;
     }
 
