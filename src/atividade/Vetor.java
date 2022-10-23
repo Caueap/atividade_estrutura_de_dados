@@ -24,9 +24,18 @@ public class Vetor {
 
     }
 
+    /*public Aluno pega(int posicao) {
+        return this.alunos[posicao];
+    }*/
+
     public Aluno pega(int posicao) {
-        return null;
+        if (!this.posicaoOcupada(posicao)) {
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+        return this.alunos[posicao];
     }
+
+
 
     public void remove(int posicao) {
 
@@ -71,6 +80,10 @@ public class Vetor {
         builder.append("]");
 
         return builder.toString();
+    }
+
+    private boolean posicaoOcupada(int posicao) {
+        return posicao >= 0 && posicao < this.totalDeAlunos;
     }
 
 }
