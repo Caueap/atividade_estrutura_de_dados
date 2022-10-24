@@ -2,7 +2,7 @@ package atividade;
 
 public class Vetor {
 
-    private Aluno[] alunos = new Aluno[100000];
+    private Aluno[] alunos = new Aluno[1000];
 
     private int totalDeAlunos = 0;
 
