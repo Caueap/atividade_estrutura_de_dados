@@ -45,10 +45,17 @@ public class Vetor {
         return this.alunos[posicao];
     }
 
-
-
     public void remove(int posicao) {
 
+        if (!posicaoOcupada(posicao)) {
+            throw new IllegalArgumentException("Posição inválida");
+        }
+
+        for (int i = posicao; i < this.totalDeAlunos - 1; i++) {
+            this.alunos[i] = this.alunos[i + 1];
+        }
+
+        this.totalDeAlunos--;
     }
 
     /*public boolean contem(Aluno aluno) {
